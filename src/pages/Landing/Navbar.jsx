@@ -11,8 +11,8 @@ const Navbar = () => {
                             <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
                         </div>
                     </div>
-                    <div className="ml-2 font-semibold text-slate-600">
-                        <span>Ramandhanu Yuchnan Utomo</span>
+                    <div className="ml-2 font-semibold">
+                        <span>Ramandhanu</span>
                     </div>
                 </div>
                 <div className="flex gap-5 text-sm justify-center items-center p-2">

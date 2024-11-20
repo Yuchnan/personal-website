@@ -1,19 +1,24 @@
 import React, { useState } from 'react'
+
 import { LIST_MODE } from '@/constants/listMode'
+import { useAtom } from "jotai";
+import { modeAtom } from "@/jotai/atoms.js";
 
 const OptionMode = () => {
-    const [currentIndex, setCurrentIndex] = useState(0)
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [, setMode] = useAtom(modeAtom)
 
     const handleImageClick = () => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % LIST_MODE.length)
-        console.log(LIST_MODE[currentIndex].value)
+        const nextIndex = (currentIndex + 1) % LIST_MODE.length;
+        setCurrentIndex(nextIndex);
+        setMode(LIST_MODE[nextIndex].value);
     };
 
     return (
         <img
             src={LIST_MODE[currentIndex].img}
             alt={LIST_MODE[currentIndex].value}
-            className='ml-2 w-8'
+            className='ml-2 w-7'
             onClick={handleImageClick}
         />
     );
