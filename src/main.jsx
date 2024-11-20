@@ -5,6 +5,8 @@ import './index.css'
 
 import Landing from "./pages/Landing"
 import About from "./pages/About"
+import Project from './pages/Project'
+import Contact from './pages/Contact'
 
 const router = createBrowserRouter([
   {
@@ -12,8 +14,16 @@ const router = createBrowserRouter([
     element: <Landing />
   },
   {
-    path: "/about",
+    path: "/tentang",
     element: <About />
+  },
+  {
+    path: "/project",
+    element: <Project />
+  },
+  {
+    path: "/kontak",
+    element: <Contact />
   }
 ])
 
