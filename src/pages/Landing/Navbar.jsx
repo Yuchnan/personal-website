@@ -2,6 +2,7 @@ import React from 'react'
 import OptionMode from '@/components/Modules/LandingPage/OptionMode';
 
 import { useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 const Navbar = () => {
     const navigate = useNavigate()
@@ -19,21 +20,30 @@ const Navbar = () => {
                     </div>
                 </div>
                 <div className="flex gap-5 text-sm justify-center items-center p-2">
-                    <a
+                    <motion.a
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.8 }}
                         onClick={() => navigate("/tentang")}
+                        className='hover:font-semibold'
                     >
                         Tentang Saya
-                    </a>
-                    <a
+                    </motion.a>
+                    <motion.a
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.8 }}
                         onClick={() => navigate("/project")}
+                        className='hover:font-semibold'
                     >
                         Project
-                    </a>
-                    <a
+                    </motion.a>
+                    <motion.a
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.8 }}
                         onClick={() => navigate("/contact")}
+                        className='hover:font-semibold'
                     >
                         Kontak
-                    </a>
+                    </motion.a>
                     <OptionMode />
                 </div>
             </nav>
