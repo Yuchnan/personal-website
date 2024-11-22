@@ -1,4 +1,4 @@
-const LIST_MODE = [
+export const LIST_MODE = [
     {
         img: "./day-mode.png",
         value: "day"
@@ -8,5 +8,3 @@ const LIST_MODE = [
         value: "night"
     }
 ]
-
-export { LIST_MODE }
